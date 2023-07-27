@@ -2,12 +2,17 @@
 {% block title %}Book List{% endblock %}
 
 {% block content %}
-    {% for book in book_list %}
-    <ul>
-        <li>Title: <b><i>{{ book.title }}</i></b></li>
-        <li>Subtitle: <b><i>{{ book.subtitle }}</i></b></li>
-        <li>Author: <b><i>{{ book.author }}</i></b></li>
-        <li>ISBN: <b><i>{{ book.isbn }}</i></b></li>
-    </ul>
-    {% endfor %}
+    <div class="py-4 py-lg-5">
+        <div class="container">
+            <h1>All books</h1>
+            {% for book in book_list %}
+            <ul class="ps-3">
+                <li>Title: <b><i>{{ book.title }}</i></b></li>
+                <li>Subtitle: <b><i>{{ book.subtitle }}</i></b></li>
+                <li>Author: <b><i>{{ book.author }}</i></b></li>
+                <li>ISBN: <b><i>{{ book.isbn }}</i></b></li>
+            </ul>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
